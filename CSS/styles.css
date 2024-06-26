@@ -1,0 +1,172 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0099ff; /* Color de fondo */
+  }
+  
+  header {
+    background-color: #00c4ff;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-container {
+    margin-right: 50px;
+  }
+  
+  .logo-container img {
+    width: 150px;
+    height: auto;
+  }
+  
+  h1 {
+    margin: 50;
+  }
+  
+  h2 {
+    margin: 50;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style-type: lower-alpha;
+    margin: 50;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  main {
+    margin: 20px;
+  }
+  
+  footer {
+    background-color: #00f6ff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto; /* Centrar horizontalmente */
+    padding: 20px;
+  }
+
+  .container select option {
+    background-color: #33e4ff; /* Cambia el color de fondo de las opciones */
+    color: white; /* Cambia el color del texto de las opciones */
+}
+  
+  .center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Altura mínima para centrar verticalmente */
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+  }
+  
+  .center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+  
+  .center-image img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  /* Ejercicios */
+  #ejercicios {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #ejercicios h2 {
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  #ejercicios ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #ejercicios ul li {
+    margin-bottom: 10px;
+  }
+  
+  #ejercicios ul li a {
+    display: block;
+    padding: 10px;
+    background-color: #f0f0f0;
+    text-decoration: none;
+    color: #57a8f3;
+    border-radius: 5px;
+  }
+  
+  #ejercicios ul li a:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Estilos del formulario centrado */
+  form {
+    background-color: #15f1ba; /* Color de fondo del formulario */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    color: #fff; /* Color del texto */
+  }
+  
+  form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background-color: #35d9f3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #5dc6f0;
+  }
+  
+  #resultado {
+    margin-top: 20px;
+    color: white;
+    background-color: rgb(27, 175, 244);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(12, 2, 2, 0.5);
+  }
+  
