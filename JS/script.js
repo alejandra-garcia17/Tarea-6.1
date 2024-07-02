@@ -1,5 +1,7 @@
 class Ejercicios{
 
+    // CAMBIAR TODO,POBNER UN EJERCICIO SIMILAR
+
     // Ejercicios Básicos de Procesos Selectivos (Condiciones)
     // Ejercicio 1: Determinar si un número es par o impar
     Ejercicio1(){
@@ -147,17 +149,60 @@ class Ejercicios{
 
     // Ejercicio 6: Multiplicación de dos números por sumas sucesivas
     Ejercicio11(){
-        let numero1 = parseInt(document.getElementById('numero1').value);
-        let numero2 = parseInt(document.getElementById('numero2').value);
+        let numero1 = parseInt(document.getElementById('numero1').value); 
+        let numero2 = parseInt(document.getElementById('numero2').value); 
+        let result = 0; 
         let resultado = document.getElementById('resultado');
-        let result = 0
-
-        for (let i = 0; i < numero2; i++) {
-            result += numero1;
-        }
-
+ 
+        for (let i = 0; i < numero2; i++) { 
+        result += numero1; 
+        } 
+ 
         resultado.textContent = "El resultado de la multiplicación es " + result;
     }
+
+    // Ejercicio 7: División de dos números por restas sucesivas
+    Ejercicio12(){
+        let dividendo = parseInt(document.getElementById('dividendo').value);  
+        let divisor = parseInt(document.getElementById('divisor').value); 
+        let cociente = 0; 
+        let resultado = document.getElementById('resultado');
+ 
+        while (dividendo >= divisor) { 
+            dividendo -= divisor; 
+            cociente++; 
+        } 
+ 
+        resultado.textContent = "El cociente de la división es " + cociente;
+    }
+
+    // Ejercicio 8: Presentar la serie de Fibonacci de n números
+    Ejercicio13(){
+        let n = parseInt(document.getElementById('n').value);   
+        let a = 0  
+        let b = 1 
+        let resultado = document.getElementById('resultado');
+ 
+        for (let i = 2; i < n; i++) { 
+            let c = a + b; 
+            resultado.textContent = c; 
+            a = b; 
+            b = c; 
+        } 
+    }
+
+    // Ejercicio 9: Presentar los números múltiplos de 5 de un arreglo
+    Ejercicio11(){
+        let numeros = [10, 15, 23, 30, 45, 50]; 
+ 
+        for (let i = 0; i < numeros.length; i++) { 
+            if (numeros[i] % 5 === 0) { 
+                console.log(numeros[i] + " es múltiplo de 5"); 
+            } 
+        }
+    }
+
+
 }
 
 
