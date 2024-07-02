@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIOS</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="/IMG/logo.jpg" alt="Logo">
+        </div>
+        <h1>Menu Principal</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h2>El mayor de los elementos de un arreglo</h2>
+            <form>
+                <label for="numeros">Ingrese una cantidad de numeros separados por comas:</label>
+                <input type="text" id="numeros" required>
+                <button type="button" class="boton" onclick="ope.Ejercicio16()">Verificar</button>
+            </form>
+            <div id="resultado">
+                Respuesta:
+            </div>
+            <div class="explanation-box">
+                <h3>Explicacion del codigo</h3>
+                <p>- Primero, tomamos el número que ingresamos en el campo de texto de la página web.</p>
+                <p>- Segundo, el "input.split(','):" sirve para dividir el valor ingresado por el usuario en un array de cadenas, usando la coma como separador. El ".map(num => parseInt(num.trim())):" Recorre cada elemento del array, eliminando espacios en blanco y convirtiéndolo en un número entero</p>
+                <p>- Tercero,  "for (let i = 1; i < numeros.length; i++) { ... }:" Itera sobre cada número en el array empezando desde el segundo elemento. "if (numeros[i] > mayor) { mayor = numeros[i]; }:" Verifica si el número actual es mayor que el valor de mayor. Si es así, actualiza mayor.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>InovaByte Tech</p>
+    </footer>
+
+<script src="/JS/script.js"></script>
+
+</body>
+</html>

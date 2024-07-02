@@ -179,28 +179,81 @@ class Ejercicios{
     // Ejercicio 8: Presentar la serie de Fibonacci de n números
     Ejercicio13(){
         let n = parseInt(document.getElementById('n').value);   
-        let a = 0  
-        let b = 1 
+        let a = 0;  
+        let b = 1; 
         let resultado = document.getElementById('resultado');
- 
+        let serie = `${a}, ${b}`;
+
         for (let i = 2; i < n; i++) { 
             let c = a + b; 
-            resultado.textContent = c; 
+            serie += `, ${c}`;
             a = b; 
-            b = c; 
+             b = c; 
         } 
+
+        resultado.textContent = serie;
     }
 
+
     // Ejercicio 9: Presentar los números múltiplos de 5 de un arreglo
-    Ejercicio11(){
-        let numeros = [10, 15, 23, 30, 45, 50]; 
- 
+    Ejercicio14() {
+        const input = document.getElementById('numeros').value;
+        const numeros = input.split(',').map(num => parseInt(num.trim()));
+        const resultadoDiv = document.getElementById('resultado');
+    
         for (let i = 0; i < numeros.length; i++) { 
-            if (numeros[i] % 5 === 0) { 
-                console.log(numeros[i] + " es múltiplo de 5"); 
-            } 
+            if (numeros[i] % 5 === 0) {
+                resultadoDiv.innerHTML += `<p>${numeros[i]} es múltiplo de 5</p>`;
+            }
         }
     }
+
+    // Ejercicio 10: El promedio de los números de un arreglo
+    Ejercicio15() {
+        const input = document.getElementById('numeros').value;
+        const numeros = input.split(',').map(num => parseInt(num.trim()));
+        let suma = 0;
+        const resultadoDiv = document.getElementById('resultado');
+        
+        for (let i = 0; i < numeros.length; i++) {
+            suma += numeros[i];
+        }
+
+        let promedio = suma / numeros.length;
+        resultadoDiv.innerHTML = `<p>El promedio es ${promedio}</p>`;
+    }
+
+    // Ejercicio 11: El mayor de los elementos de un arreglo 
+    Ejercicio16() {
+        const input = document.getElementById('numeros').value;
+        const numeros = input.split(',').map(num => parseInt(num.trim()));
+        let mayor = numeros[0];
+        const resultadoDiv = document.getElementById('resultado');
+
+        for (let i = 1; i < numeros.length; i++) {
+            if (numeros[i] > mayor) {
+                mayor = numeros[i];
+            }
+        }
+
+        resultadoDiv.innerHTML = `<p>El mayor número es ${mayor}</p>`;
+    }
+
+    // Ejercicio 13: Los pares de un arreglo recorridos desde el último elemento al primero
+    Ejercicio17() {
+        const input = document.getElementById('numeros').value;
+        const numeros = input.split(',').map(num => parseInt(num.trim()));
+        const resultadoDiv = document.getElementById('resultado');
+
+        for (let i = numeros.length - 1; i >= 0; i--) {
+            if (numeros[i] % 2 === 0) {
+                resultadoDiv.innerHTML += `<p>${numeros[i]} es par</p>`;
+            }
+        }
+    }
+    
+    // 
+    
 
 
 }
