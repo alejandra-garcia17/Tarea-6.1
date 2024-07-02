@@ -22,21 +22,23 @@
     </header>
     <main>
         <div class="container">
-            <h2>Determinar numero</h2>
+            <h2>Multiplicación de dos números por sumas sucesivas</h2>
             <form>
-                <label for="num">Ingrese un numero:</label>
-                <input type="number" id="num" required>
-                <button type="button" class="boton" onclick="ope.Ejercicio3()">Verificar numero</button>
+                <label for="numero1">Ingrese un numero:</label>
+                <input type="number" id="numero1" required>
+                <label for="numero2">Ingrese un numero:</label>
+                <input type="number" id="numero2" required>
+                <button type="button" class="boton" onclick="ope.Ejercicio11()">Verificar</button>
             </form>
             <div id="resultado">
                 Respuesta:
             </div>
             <div class="explanation-box">
                 <h3>Explicacion del codigo</h3>
-                <p>- Primero, tomamos el número que ingresamos en el campo de texto de la página web.</p>
-                <p>- Segundo, usamos la condicionla if... if else... el. Con la condicion de que "if(num > 0) es positivo, o si "if(num < 0), es negativo" y sino se cumple ninguna, num es igual a 0</p>
-                <p>- Y por ultimo, se mostrara num y sies positivo, negativo o cero.</p>
-              </div>
+                <p>- Primero se ingresan dos numeros</p>
+                <p>- Segundo usamos el bucle "For", con la variable result que tiene el valor de de 0, el cual se repite conforme al segundo numero que hemos ingresado</p>
+                <p>- Tercero, despues de contar y repetir los numeros, la variable resulta nos dará el resultado final</p>
+            </div>
         </div>
     </main>
     <footer>

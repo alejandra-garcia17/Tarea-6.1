@@ -18,7 +18,7 @@ class Ejercicios{
         let num = document.getElementById('num').value;
         let resultado = document.getElementById('resultado');
         
-        if (num > 18) {
+        if (num >= 18) {
             resultado.textContent = `Usted es mayor de edad`;
         } else {
             resultado.textContent = `Usted no es mayor de edad`;
@@ -145,7 +145,19 @@ class Ejercicios{
         resultado.textContent = "El número invertido es " + invertido;
     }
 
+    // Ejercicio 6: Multiplicación de dos números por sumas sucesivas
+    Ejercicio11(){
+        let numero1 = parseInt(document.getElementById('numero1').value);
+        let numero2 = parseInt(document.getElementById('numero2').value);
+        let resultado = document.getElementById('resultado');
+        let result = 0
 
+        for (let i = 0; i < numero2; i++) {
+            result += numero1;
+        }
+
+        resultado.textContent = "El resultado de la multiplicación es " + result;
+    }
 }
 
 
