@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIOS</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="/IMG/logo.jpg" alt="Logo">
+        </div>
+        <h1>Menu Principal</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Eliminar caracteres específicos</h2>
+            <form>
+                <label for="cadena">Ingrese una cadena de texto:</label>
+                <input type="text" id="cadena" required>
+                <label for="caracter">Ingrese un caracter:</label>
+                <input type="text" id="caracter" required>
+                <button type="button" class="boton" onclick="ope.Ejercicio24()">Verificar</button>
+            </form>
+            <div id="resultado">
+                Respuesta:
+            </div>
+            <div class="explanation-box">
+                <h3>Explicacion del codigo</h3>
+                <p>- Primero, tomamos la cadena de texto que ingresamos en el campo de texto de la página web.</p>
+                <p>- Segundo, "let nuevaCadena = "";": Inicializa una cadena vacía para almacenar la nueva cadena sin el carácter especificado.</p>
+                <p>- Tercero, "for (let i = 0; i < cadena.length; i++) { ... }": Itera sobre cada carácter de la cadena. Usamos la condicional "if (cadena[i] !== caracter) { nuevaCadena += cadena[i]; }": Verifica si el carácter actual no es igual al carácter especificado. Si no lo es, agrega el carácter a la nueva cadena.</p>
+                <p>- Cuarto, "resultadoDiv.innerHTML = La cadena sin el carácter '${caracter}' es: ${nuevaCadena};": Muestra la nueva cadena sin el carácter especificado en el div de resultados.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>InovaByte Tech</p>
+    </footer>
+
+<script src="/JS/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIOS</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="/IMG/logo.jpg" alt="Logo">
+        </div>
+        <h1>Menu Principal</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Contar la longitud de la palabra más larga</h2>
+            <form>
+                <label for="cadena">Ingrese una cadena de texto:</label>
+                <input type="text" id="cadena" required>
+                <button type="button" class="boton" onclick="ope.Ejercicio27()">Verificar</button>
+            </form>
+            <div id="resultado">
+                Respuesta:
+            </div>
+            <div class="explanation-box">
+                <h3>Explicacion del codigo</h3>
+                <p>- Primero, tomamos la cadena de texto que ingresamos en el campo de texto de la página web.</p>
+                <p>- Segundo, "let palabraActual = "";": Inicializa una cadena vacía para almacenar la palabra actual. Y "let longitudMaxima = 0;": Inicializa la variable para almacenar la longitud máxima de la palabra encontrada.</p>
+                <p>- Tercero, "for (let i = 0; i < cadena.length; i++) { ... }": Itera sobre cada carácter de la cadena.</p>
+                <p>- Cuarto, "if (cadena[i] === " " || i === cadena.length - 1) { ... }": Verifica si el carácter actual es un espacio o si es el último carácter de la cadena. "if (i === cadena.length - 1) { palabraActual += cadena[i]; }": Si es el último carácter, lo añade a la palabra actual. ""if (palabraActual.length > longitudMaxima) { longitudMaxima = palabraActual.length; }": Si la longitud de la palabra actual es mayor que la longitud máxima, actualiza la longitud máxima. "palabraActual = "";": Reinicia la palabra actual para la siguiente iteración. else { palabraActual += cadena[i]; }: Si el carácter no es un espacio, lo añade a la palabra actual.</p>
+                <p>- Quinto, "resultadoDiv.innerHTML = La longitud de la palabra más larga es: ${longitudMaxima};": Muestra la longitud de la palabra más larga en el div de resultados.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>InovaByte Tech</p>
+    </footer>
+
+<script src="/JS/script.js"></script>
+
+</body>
+</html>

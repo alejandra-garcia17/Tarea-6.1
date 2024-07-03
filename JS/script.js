@@ -252,13 +252,171 @@ class Ejercicios{
         }
     }
     
-    // 
+    // CADENAS
+    // 1. Imprimir cada carácter de una cadena
+    Ejercicio18() {
+        const cadena = document.getElementById('cadena').value;
+        const result = document.getElementById('resultado');
+        
+        for (let i = 0; i < cadena.length; i++) {
+            result.innerHTML += `<br>${cadena[i]}<br>`;
+        }
+    }
     
+    // 2. Contar las vocales en una cadena
+    Ejercicio19() {
+        const cadena = document.getElementById('cadena').value.toLowerCase();
+        const vocales = ['a', 'e', 'i', 'o', 'u'];
+        let contador = 0;
+        const result = document.getElementById('resultado');
 
+        for (let i = 0; i < cadena.length; i++) {
+            if (vocales.includes(cadena[i])) {
+                contador++;
+            }
+        }
+        
+        // Mostrar el número de vocales en el div de resultados
+        
+        result.innerHTML = `<p>La cadena tiene ${contador} vocales.</p>`;
+    }
+    
+    // 3. Invertir una cadena
+    Ejercicio20() {
+        const cadena = document.getElementById('cadena').value;
+        let cadenaInvertida = "";
+        const result = document.getElementById('resultado');
+    
+        for (let i = cadena.length - 1; i >= 0; i--) {
+            cadenaInvertida += cadena[i];
+        }
+        
+        
+        result.innerHTML = `<p>La cadena invertida es: ${cadenaInvertida}</p>`;
+    }
 
+    // 4. Contar palabras en una cadena
+    Ejercicio21() {
+        const cadena = document.getElementById('cadena').value.trim();
+        let contadorPalabras = 0;
+        const result = document.getElementById('resultado');
+    
+        if (cadena !== "") {
+            const palabras = cadena.split(/\s+/); // \s+ es una expresión regular que encuentra uno o más espacios
+            contadorPalabras = palabras.length;
+        }
+    
+        result.innerHTML = `<p>La cadena tiene ${contadorPalabras} palabras.</p>`;
+    }
+
+    // 5. Reemplazar espacios con guiones
+    Ejercicio22() {
+        const cadena = document.getElementById('cadena').value;
+        let cadenaModificada = "";
+        const result= document.getElementById('resultado');
+
+        for (let i = 0; i < cadena.length; i++) {
+            if (cadena[i] === " ") {
+                cadenaModificada += "-";
+            } else {
+                cadenaModificada += cadena[i];
+            }
+        }
+
+        result.innerHTML = `<p>La cadena modificada es: ${cadenaModificada}</p>`;
+    }
+
+    // 6. Contar caracteres específicos
+    Ejercicio23() {
+        const cadena = document.getElementById('cadena').value;
+        const caracter = document.getElementById('caracter').value;
+        let contador = 0;
+        const result = document.getElementById('resultado');
+ 
+        for (let i = 0; i < cadena.length; i++) {
+            if (cadena[i] === caracter) {
+                contador++;
+            }
+        }
+
+        result.innerHTML = `<p>El carácter '${caracter}' aparece ${contador} veces en la cadena.</p>`;
+    }
+
+    // 7. Eliminar caracteres específicos
+    Ejercicio24() {
+        const cadena = document.getElementById('cadena').value;
+        const caracter = document.getElementById('caracter').value;
+        let nuevaCadena = "";
+        const result = document.getElementById('resultado');
+
+        for (let i = 0; i < cadena.length; i++) {
+            if (cadena[i] !== caracter) {
+                nuevaCadena += cadena[i];
+            }
+        }
+
+        result.innerHTML = `<p>La cadena sin el carácter '${caracter}' es: ${nuevaCadena}</p>`;
+    }
+
+    // 8. Convertir mayúsculas a minúsculas y viceversa
+    Ejercicio25() {
+        const cadena = document.getElementById('cadena').value;
+        let nuevaCadena = "";
+        const result = document.getElementById('resultado');
+
+        for (let i = 0; i < cadena.length; i++) {
+            let char = cadena[i];
+            if (char >= 'a' && char <= 'z') {
+                nuevaCadena += String.fromCharCode(char.charCodeAt(0) - 32);
+            } else if (char >= 'A' && char <= 'Z') {
+                nuevaCadena += String.fromCharCode(char.charCodeAt(0) + 32);
+            } else {
+                nuevaCadena += char;
+            }
+        }
+
+        result.innerHTML = `<p>La cadena convertida es: ${nuevaCadena}</p>`;
+    }
+
+    // 9. Eliminar espacios
+    Ejercicio26() {
+        const cadena = document.getElementById('cadena').value;
+        let nuevaCadena = "";
+        const result = document.getElementById('resultado');
+
+        for (let i = 0; i < cadena.length; i++) {
+            if (cadena[i] !== " ") {
+                nuevaCadena += cadena[i];
+            }
+        }
+        
+        result.innerHTML = `<p>La cadena sin espacios es: ${nuevaCadena}</p>`;
+    }
+
+    // 10. Contar la longitud de la palabra más larga
+    Ejercicio27() {
+        const cadena = document.getElementById('cadena').value;
+        let palabraActual = "";
+        let longitudMaxima = 0;
+        const result = document.getElementById('resultado');
+        
+        for (let i = 0; i < cadena.length; i++) {
+            if (cadena[i] === " " || i === cadena.length - 1) {
+                if (i === cadena.length - 1) {
+                    palabraActual += cadena[i];
+                }
+                if (palabraActual.length > longitudMaxima) {
+                    longitudMaxima = palabraActual.length;
+                }
+                palabraActual = "";
+            } else {
+                palabraActual += cadena[i];
+            }
+        }
+
+        result.innerHTML = `<p>La longitud de la palabra más larga es: ${longitudMaxima}</p>`;
+    }
 }
-
-
 
 let ope = new Ejercicios()
 
